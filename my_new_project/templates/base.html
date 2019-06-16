@@ -1,0 +1,79 @@
+{% load staticfiles %}
+<html>
+<head>
+    <title>Base File</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}">
+    <script type="text/javascript" href="{% static 'js/lightbox-plus-jquery.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/team.css' %}">
+</head>
+<style>
+    #name1{
+        font-size: 20px;
+        color: brown;
+        font-family: Calibri;
+        text-shadow: 2px 2px black;
+    }
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: red;
+    }
+    li{
+        float: left;
+    }
+    li a{
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 15px 20px;
+        text-decoration: none;
+        font-size: 20px;
+    }
+    .active{
+        background-color: black;
+    }
+    li a:hover{
+        background-color: bisque;
+        color: black;
+    }
+    .footer{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: red;
+        color: white;
+        text-align: center;
+    }
+    #h11{
+        font-size: 50px;
+        text-shadow: 3px 3px 3px red;
+        margin-top: -5px;
+    }
+</style>
+<body>
+<ul>
+    <li><a href="/home/" class="active">Home</a> </li>
+    <li><a href="/contact/">contact</a> </li>
+    <li><a href="/courses/">courses</a> </li>
+    <li><a href="/feedback/">feedback</a> </li>
+    <li><a href="/ourteam/">ourteam</a> </li>
+    <li><a href="/gallery/">gallery</a> </li>
+</ul>
+<marquee><h1 id="h11">WELCOME TO BERHAMPUR UNIVERSITY</h1></marquee>
+{% block content %}
+{% endblock %}
+
+<footer class="footer">
+      <h3>THANK YOU</h3>
+</footer>
+</body>
+</html>

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+<html>
+<head>
+    <title>OUR TEAM</title>
+</head>
+<body>
+{% block content %}
+    <div class="team">
+    <h1>Our Team</h1>
+    <span class="sp1"></span>
+    <div class="pics">
+        <a href="#p1"><img src="{% static 'images/tut0313_001.jpg' %}"></a>
+        <a href="#p2"><img src="{% static 'images/tut0313_001.jpg' %}"></a>
+        <a href="#p3"><img src="{% static 'images/tut0313_001.jpg' %}"></a>
+    </div>
+    <div class="section" id="p1">
+    <h1 class="name">SISH</h1>
+    <span class="sp1"></span>
+    <center><p>JAVA JAVA JAVA JAVA JAVA JAVA JAVA</p></center>
+    </div>
+    <div class="section" id="p1">
+    <h1 class="name">ANUSHKA</h1>
+    <span class="sp1"></span>
+    <center><p>Python Python Python Python Python Python</p></center>
+    </div>
+    <div class="section" id="p1">
+    <h1 class="name">RICHI</h1>
+    <span class="sp1"></span>
+    <center><p>JAVA JAVA JAVA JAVA JAVA JAVA JAVA</p></center>
+    </div>
+    </div>
+{%endblock %}
+
+</body>
+</html>

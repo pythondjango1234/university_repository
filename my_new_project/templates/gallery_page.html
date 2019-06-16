@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+<html>
+<head>
+    <title>GALLERY</title>
+</head>
+<body>
+{% block content %}
+    <style>
+    .container img{
+        filter: grayscale(100%);
+        transition: 1.3s;
+    }
+    .container img:hover{
+        filter: grayscale(0);
+        transform: scale(1.1);
+    }
+    </style>
+    <div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <a herf="{% static 'images/tut0313_001.jpg' %}" data-lightbox="container"><img src="{% static 'images/tut0313_001_001.jpg' %}"></a>
+        </div>
+        <div class="col-md-3">
+            <a href="{% static 'images/Tut0294.jpg' %}" data-lightbox="container"><img src="{% static 'images/tut0313_001_001.jpg' %}"></a>
+        </div>
+        <div class="col-md-3">
+            <a href="{%  static 'images/Tut0251.jpg' %}" data-lightbox="container"><img src="{% static 'images/tut0313_001_001.jpg' %}"></a>
+        </div>
+
+    </div>
+    </div>
+{%endblock %}
+
+</body>
+</html>
